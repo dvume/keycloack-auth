@@ -1,0 +1,17 @@
+server:
+  port: 8083
+spring:
+  security:
+    oauth2:
+      resource-server:
+        jwt:
+          issuer-uri: http://localhost:8085/realms/app-realm
+          jwk-set-uri: http://localhost:8085/realms/app-realm/protocol/openid-connect/certs
+auth:
+  auth-type: BASIC
+  admin:
+    name: appadmin
+    pwd: admin
+  user:
+    name: appuser
+    pwd: user
